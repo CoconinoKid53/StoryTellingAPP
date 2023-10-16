@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #AAB985;
+    --font-color: #ffffff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+
+}
