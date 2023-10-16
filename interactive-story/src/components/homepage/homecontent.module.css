@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --content-background-color: #F3EDDF;
+    --font-color: #ffffff;
+}
+
+.contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    font-family: 'Andika', sans-serif;
+    padding: 3rem;
+}
+
+.contents h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contents p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.left {
+    margin: auto auto;
+}

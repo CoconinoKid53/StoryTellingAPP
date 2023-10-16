@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-background-color: #96AF59;
+    --button-background-color-hover: #6e9a00;
+}
+
+.emphasized {
+    background-color: var(--button-background-color);
+    padding: 1rem 3rem;
+    color: var(--font-color);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Andika', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.emphasized a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.emphasized:hover {
+    background-color: var(--button-background-color-hover);
+    cursor: pointer;
+}

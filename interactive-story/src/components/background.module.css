@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --content-background-color: #F3EDDF;
+    --font-color: #ffffff;
+}
+
+.container {
+    background-color: var(--content-background-color);
+    height: 80vh;
+    width: 70vw;
+    margin: 6rem auto;
+    border-radius: 30px;
+}
+
