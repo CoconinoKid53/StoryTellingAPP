@@ -1,5 +1,10 @@
 import './App.css';
 import Homepage from './components/homepage/home';
+import { Routes, Route } from "react-router-dom"
+import FAQ from './components/faq/faq';
+import Contacts from './components/contact/contact';
+import Stories from './components/stories/stories';
+
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -29,7 +34,15 @@ const analytics = getAnalytics(app);
 
 function App() {
   return (
-    <Homepage />
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={<Homepage />}/>
+        <Route path='/FAQ' element={<FAQ />}/>
+        <Route path='/Contacts' element={<Contacts />}/>
+        <Route path='/Stories' element={<Stories />}/>
+      </Routes>
+    </div>
+    
   )
 }
 

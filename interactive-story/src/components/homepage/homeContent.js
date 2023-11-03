@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Background from "../background";
 import EmphasizedButton from "../button";
 import homecontent from "./homecontent.module.css"
@@ -11,9 +12,9 @@ function HomeContent() {
                     <div className={homecontent.left}>
                         <h2>WELCOME!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-                        <EmphasizedButton content="START NOW"/>
+                        <Link to="/Stories"><EmphasizedButton content="START NOW"/></Link>
                     </div>
-                    <div>
+                    <div class={homecontent.imageContainer}>
                         <img src={homeImage}/>
                     </div>
                 </div>

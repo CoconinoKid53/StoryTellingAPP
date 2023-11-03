@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import nav from "./nav.module.css"
 import logo from "./assets/logo.svg"
 import homeIcon from "./assets/home.svg"
@@ -16,19 +17,19 @@ function NavBar() {
                 <ul>
                     <li className={nav.links}>
                         <img src={homeIcon}/> 
-                        <a href="#">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className={nav.links}>
                         <img src={storiesIcon}/> 
-                        <a href="#">Stories</a>
+                        <Link to="/Stories">Stories</Link>
                     </li>
                     <li className={nav.links}>
                         <img src={faqIcon}/> 
-                        <a href="#">FAQ</a>
+                        <Link to="/FAQ">FAQ</Link>
                     </li>
                     <li className={nav.links}>
                         <img src={contactIcon}/> 
-                        <a href="#">Contact Us</a>
+                        <Link to="/Contacts">Contacts Us</Link>
                     </li>
                 </ul>
             </nav>
