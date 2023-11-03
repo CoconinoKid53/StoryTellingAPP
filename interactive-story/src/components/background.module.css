@@ -11,9 +11,9 @@
 
 .container {
     background-color: var(--content-background-color);
-    height: 80vh;
+    height: 800px;
     width: 70vw;
-    margin: 6rem auto;
+    margin: 4rem auto;
     border-radius: 30px;
 }
 

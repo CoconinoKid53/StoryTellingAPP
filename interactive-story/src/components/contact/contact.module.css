@@ -1,0 +1,21 @@
+.leftSide {
+    text-align: left;
+}
+
+.labels {
+    margin: 1.5rem 0;
+}
+
+.labels p {
+    margin: 0;
+}
+
+.inputs {
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+}
+
+textarea {
+    width: 530px;
+    height: 200px;
+}

@@ -15,6 +15,7 @@
     grid-gap: 2rem;
     font-family: 'Andika', sans-serif;
     padding: 3rem;
+    align-items: center;
 }
 
 .contents h2 {
@@ -28,5 +29,9 @@
 }
 
 .left {
-    margin: auto auto;
+    text-align: left;
+}
+
+.imageContainer {
+    text-align: center;
 }
