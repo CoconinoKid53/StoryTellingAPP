@@ -6,6 +6,9 @@ import contactimage from "../assets/contact.svg"
 import contact from "./contact.module.css"
 import EmphasizedButton from "../button"
 
+// testing testing 
+
+
 function Contacts(){
     return (
         <div className={home.container}>
