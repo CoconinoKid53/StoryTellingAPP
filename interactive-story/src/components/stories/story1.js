@@ -2,46 +2,45 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../firestore';
 
 
-function JournalEntries() {
-    return (
-    <div>
-        <p>This story is an example</p> 
-        <button>Continue</button>   
-    </div>
-    )
-    // Create functionality for state changing
-    // const [entries, setEntries] = useState([]);
-    
-    //   // Read from database on snapshot / site load
-    //   useEffect(() => {
-    //     const unsubscribe = db.collection('entries').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
-    //       const entryData = snapshot.docs.map((doc) => ({
-    //         id: doc.id,
-    //         ...doc.data(),
-    //       }));
-    //       setEntries(entryData);
-    //     });
-    
-    //     return () => {
-    //       unsubscribe();
-    //     };
-    //   }, []);
-    
-    //   // HTML
-    //   return (
-    //     <div>
-    //       <h2>Journal Entries</h2>
-    //       <div className="journal-entries-container">
-    //         {entries.map((entry) => (
-    //           <div key={entry.id} className="journal-entry-box">
-    //             <strong>{entry.title}</strong>
-    //             <p>{entry.timestamp.toDate().toLocaleString()}</p>
-    //             <p>{entry.text}</p>
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   );
-    }
+function StoryOne({ documentId }) {
+  const [entry, setEntry] = useState(null);
 
-export default JournalEntries
+  useEffect(() => {
+    const docRef = db.collection('story1').doc(documentId);
+
+    const unsubscribe = docRef.onSnapshot((snapshot) => {
+      if (snapshot.exists) {
+        setEntry({
+          id: snapshot.id,
+          ...snapshot.data(),
+        });
+      } else {
+        console.log("ERROR: Document does not exist");
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [documentId]); // Make sure to include documentId in the dependencies array
+
+  if (!entry) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <h2>Story 1</h2>
+      <div className="story1-container">
+        <div className="journal-entry-box">
+          <strong>{entry.title}</strong>
+          <p>{entry.option1}</p>
+          <p>{entry.desc}</p>
+          <button>{entry.button1}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default StoryOne;
