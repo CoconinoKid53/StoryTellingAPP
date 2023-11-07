@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../firestore';
 
 
-function StoryOne({ documentId }) {
+function StoryOne({ documentId, onButtonPress }) {
   const [entry, setEntry] = useState(null);
 
   useEffect(() => {
@@ -22,11 +22,25 @@ function StoryOne({ documentId }) {
     return () => {
       unsubscribe();
     };
-  }, [documentId]); // Make sure to include documentId in the dependencies array
+  }, [documentId]); 
 
   if (!entry) {
     return <div>Loading...</div>;
   }
+
+  const handleButtonPress = async(buttonId) => {
+    if (entry[buttonId]) {
+        onButtonPress(entry[buttonId]);
+      } 
+      else {
+        console.log(`Document ID not found in ${buttonId} field.`);
+      }
+   };
+
+   const buttons = Object.keys(entry)
+    .filter((key) => key.startsWith('Option') || key == 'Back' || key.startsWith('Game')) // Filter button fields
+    .map((key) => ({ id: key, label: entry[key] })); // Map to an array of objects
+
 
   return (
     <div>
@@ -36,7 +50,11 @@ function StoryOne({ documentId }) {
           <strong>{entry.title}</strong>
           <p>{entry.option1}</p>
           <p>{entry.desc}</p>
-          <button>{entry.button1}</button>
+          {buttons.map((button) => (
+            <button key={button.id} onClick={() => handleButtonPress(button.id)}>
+              {button.id}
+            </button>
+          ))}
         </div>
       </div>
     </div>
