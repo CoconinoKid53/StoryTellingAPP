@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firestore';
+import main from "../stories/story1.module.css"
 
 
 function StoryOne({ documentId, onButtonPress }) {
@@ -43,7 +44,7 @@ function StoryOne({ documentId, onButtonPress }) {
 
 
   return (
-    <div>
+    <div classname={main.button}>
       <h2>Story 1</h2>
       <div className="story1-container">
         <div className="journal-entry-box">
