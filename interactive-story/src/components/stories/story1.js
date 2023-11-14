@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firestore';
+import home from "../homepage/home.module.css"
+import NavBar from '../navbar/nav';
+import Background from '../background';
 
 
 function StoryOne({ documentId, onButtonPress }) {
@@ -25,8 +28,17 @@ function StoryOne({ documentId, onButtonPress }) {
   }, [documentId]); 
 
   if (!entry) {
-    return <div>Loading...</div>;
-  }
+    return (
+      <div className={home.container}>
+      <NavBar/>
+      <div>
+        <Background>
+        <div>Loading Story...</div>
+        </Background>
+        </div>
+    </div>
+  )
+}
 
   const handleButtonPress = async(buttonId) => {
     if (entry[buttonId]) {
@@ -43,20 +55,27 @@ function StoryOne({ documentId, onButtonPress }) {
 
 
   return (
-    <div>
-      <h2>Story 1</h2>
-      <div className="story1-container">
-        <div className="journal-entry-box">
-          <strong>{entry.title}</strong>
-          <p>{entry.option1}</p>
-          <p>{entry.desc}</p>
-          {buttons.map((button) => (
-            <button key={button.id} onClick={() => handleButtonPress(button.id)}>
-              {button.id}
-            </button>
-          ))}
+    <div className={home.container}>
+      <NavBar/>
+      <div>
+        <Background>
+          <div>
+            <h2>Story 1</h2>
+            <div className="story1-container">
+              <div className="journal-entry-box">
+                <strong>{entry.title}</strong>
+                <p>{entry.option1}</p>
+                <p>{entry.desc}</p>
+                {buttons.map((button) => (
+                  <button key={button.id} onClick={() => handleButtonPress(button.id)}>
+                    {button.id}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+                </Background>
         </div>
-      </div>
     </div>
   );
 }
