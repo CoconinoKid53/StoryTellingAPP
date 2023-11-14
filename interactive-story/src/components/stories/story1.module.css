@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --content-background-color: #F3EDDF;
+    --font-color: #ffffff;
+}
+
+.container {
+    background-color: var(--content-background-color);
+    height: 800px;
+    width: 70vw;
+    margin: 4rem auto;
+    border-radius: 30px;
+}
+
+.button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  
+}

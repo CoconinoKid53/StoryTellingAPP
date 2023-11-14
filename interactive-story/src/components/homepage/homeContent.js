@@ -11,7 +11,7 @@ function HomeContent() {
                 <div className={homecontent.contents}>
                     <div className={homecontent.left}>
                         <h2>WELCOME!</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+                        <p> The purpose of this website is to provide simplistic education for children to teach morals and good choices. This project was developed in a team of 4 over the course of 12 weeks. The purpose of this site is to demonstrate our ability to develop in a team environment and to push our knowledge in new and unfamiliar fields. We hope you enjoy this small project, and hope you and your children can learn something helpful! Please feel free to provide feedback and ask questions by visiting the Contact Us page! </p>
                         <Link to="/Stories"><EmphasizedButton content="START NOW"/></Link>
                     </div>
                     <div class={homecontent.imageContainer}>

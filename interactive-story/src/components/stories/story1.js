@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firestore';
+
 import home from "../homepage/home.module.css"
 import NavBar from '../navbar/nav';
 import Background from '../background';
@@ -55,6 +56,7 @@ function StoryOne({ documentId, onButtonPress }) {
 
 
   return (
+
     <div className={home.container}>
       <NavBar/>
       <div>

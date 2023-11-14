@@ -16,16 +16,16 @@ function FAQ(){
                             <h2>Frequently Asked Question</h2>
                             <div className={faq.questions}>
                                 <div>
-                                    <h3>Question 1?</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                    <h3>How long did it take to complete this project?</h3>
+                                    <p>This web app was completed between a team of 4 college students. We dedicated around 4-6 hours every week for about 12 weeks.</p>
                                 </div>
                                 <div>
-                                    <h3>Question 2?</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                    <h3>How did you create this?</h3>
+                                    <p>This we primarily coded this using React. We also utilized Google Firestore to host our database.</p>
                                 </div>
                                 <div>
-                                    <h3>Question 3?</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                    <h3>Why did you choose to do this?</h3>
+                                    <p>We chose to do a story telling app because we thought it would be a fun way to learn how to integrate a database to a website under a team environment.</p>
                                 </div>
                             </div>
                         </div>
