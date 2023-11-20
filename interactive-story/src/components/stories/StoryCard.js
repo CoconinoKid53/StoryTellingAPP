@@ -5,8 +5,8 @@ function StoryCard({title, paragraph, image})
 {
     return(
         <section className={card.cardContainer}>
-            <img src={image} alt="Story 1"/>
-            <h2>{title}</h2>
+            <img src={image} alt="Story Card"/>
+            <h2 className={card.title}>{title}</h2>
             <p>{paragraph}</p>
         </section>
     )

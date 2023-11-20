@@ -16,7 +16,7 @@ function Stories(){
             <div>
                 <Background>
                     <div className={stories.optionContainer}>
-                        <Link to='/StoryOne'>                        
+                        <Link to='/StoryOne' className={stories.options}>                        
                             <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
                         </Link>
                         <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>

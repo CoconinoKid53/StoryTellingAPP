@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firestore';
-
+import storyStyles from "./storyStyles.module.css"
 import home from "../homepage/home.module.css"
 import NavBar from '../navbar/nav';
 import Background from '../background';
@@ -51,7 +51,7 @@ function StoryOne({ documentId, onButtonPress }) {
    };
 
    const buttons = Object.keys(entry)
-    .filter((key) => key.startsWith('Option') || key == 'Back' || key.startsWith('Game')) // Filter button fields
+    .filter((key) => key.startsWith('Option') || key === 'Back' || key.startsWith('Game')) // Filter button fields
     .map((key) => ({ id: key, label: entry[key] })); // Map to an array of objects
 
 
@@ -61,18 +61,20 @@ function StoryOne({ documentId, onButtonPress }) {
       <NavBar/>
       <div>
         <Background>
-          <div>
-            <h2>Story 1</h2>
-            <div className="story1-container">
-              <div className="journal-entry-box">
-                <strong>{entry.title}</strong>
+          <div className={storyStyles.storyContainer}>
+            <h1>Story 1</h1>
+            <div className={storyStyles.storyInnerContainer}>
+              <div className={storyStyles.storyData}>
+                <h2 className={storyStyles.title}>{entry.title}</h2>
                 <p>{entry.option1}</p>
-                <p>{entry.desc}</p>
-                {buttons.map((button) => (
-                  <button key={button.id} onClick={() => handleButtonPress(button.id)}>
-                    {button.id}
-                  </button>
-                ))}
+                <p className={storyStyles.description}>{entry.desc}</p>
+                <div className={storyStyles.buttonStyle}>
+                  {buttons.map((button) => (
+                    <button className={storyStyles.buttons} key={button.id} onClick={() => handleButtonPress(button.id)}>
+                      {button.id}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

@@ -9,3 +9,7 @@
 .cardContainer:hover {
     background-color: #d2e7f0;
 }
+
+.title a {
+    text-decoration: none;
+}

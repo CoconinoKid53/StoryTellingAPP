@@ -1,0 +1,48 @@
+:root {
+    --button-background-color: #96AF59;
+    --button-background-color-hover: #6e9a00;
+}
+
+
+.storyContainer {
+    text-align: left;
+    max-width: 80%;
+    padding-top: 10%;
+    margin: 0 auto;
+    font-family: 'Andika', sans-serif;
+}
+
+.storyContainer h1 {
+    font-size: 2.5rem;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.buttons {
+    background-color: var(--button-background-color);
+    padding: 1rem 3rem;
+    color: var(--font-color);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Andika', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.buttonStyle {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 1.5rem;
+}
+
+.buttons:hover {
+    background-color: var(--button-background-color-hover);
+    cursor: pointer;
+}
