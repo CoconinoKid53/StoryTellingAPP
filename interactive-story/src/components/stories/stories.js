@@ -21,13 +21,15 @@ function Stories(){
                         <Link to='/StoryOne' className={stories.options}>                        
                             <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
                         </Link>
-                        <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
+
+                        <Link to='/BabaYaga' className={stories.options}>                        
+                            <StoryCard image={option1} title=" The story of BabaYaga" paragraph="Can you outsmart the wicked witch Baba Yaga?"/>
+                        </Link>
+
                         <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
                         <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
                     </div>
-                    <div>
-                    <BabaYaga documentId={'A1'} />
-                    </div>
+
                 </Background>
             </div>
         </div>
