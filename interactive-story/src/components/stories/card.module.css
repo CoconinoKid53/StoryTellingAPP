@@ -1,0 +1,15 @@
+.cardContainer {
+    background-color: #ffffff;
+    width: 500px;
+    border-radius: 15px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.cardContainer:hover {
+    background-color: #d2e7f0;
+}
+
+.title a {
+    text-decoration: none;
+}
