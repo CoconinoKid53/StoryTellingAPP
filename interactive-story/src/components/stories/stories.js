@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import {db} from "../../firestore"
 import StoryCard from "./StoryCard";
 import option1 from '../assets/option1.svg'
+
 import StoryOne from "./story1";
+import BabaYaga from "./babaYaga";
 
 function Stories(){
     
@@ -22,6 +24,9 @@ function Stories(){
                         <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
                         <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
                         <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
+                    </div>
+                    <div>
+                    <BabaYaga documentId={'A1'} />
                     </div>
                 </Background>
             </div>
