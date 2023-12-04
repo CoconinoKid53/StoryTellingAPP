@@ -22,7 +22,7 @@ function BabaYaga({ documentId }) {
     return () => {
       unsubscribe();
     };
-  }, [documentId]); // Make sure to include documentId in the dependencies array
+  }, [documentId]);
 
   if (!entry) {
     return <div>Loading...</div>;
