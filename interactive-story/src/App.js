@@ -9,7 +9,7 @@ import StoryOne from './components/stories/story1';
 
 function App() {
 
-  const [documentId, setDocumentId] = useState('');
+  const [documentId, setDocumentId] = useState('A1');
   
     const handleButtonPress = (buttonId) => {
       const newDocumentId = buttonId;
