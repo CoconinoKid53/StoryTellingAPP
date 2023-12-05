@@ -28,8 +28,7 @@ function App() {
         <Route path='/FAQ' element={<FAQ />}/>
         <Route path='/Contacts' element={<Contacts />}/>
         <Route path='/Stories' element={<Stories />}/>
-        <Route path='/StoryOne' element={<StoryOne documentId={documentId} onButtonPress={handleButtonPress} />
-}/>
+        <Route path='/StoryOne' element={<StoryOne documentId={documentId} onButtonPress={handleButtonPress}/>}/>
       </Routes>
     </div>
     
