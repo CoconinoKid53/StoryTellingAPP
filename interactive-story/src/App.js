@@ -6,6 +6,7 @@ import FAQ from './components/faq/faq';
 import Contacts from './components/contact/contact';
 import Stories from './components/stories/stories';
 import StoryOne from './components/stories/story1';
+import StoryThree from './components/stories/story3';
 import BabaYaga from './components/stories/babaYaga';
 
 function App() {
@@ -30,7 +31,6 @@ function App() {
         <Route path='/Contacts' element={<Contacts />}/>
         <Route path='/Stories' element={<Stories />}/>
         <Route path='/StoryOne' element={<StoryOne documentId={documentId} onButtonPress={handleButtonPress}/>}/>
-        <Route path='/BabaYaga' element={<BabaYaga documentId={documentId} onButtonPress={handleButtonPress}/>}/>
       </Routes>
     </div>
     
