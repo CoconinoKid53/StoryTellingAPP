@@ -5,6 +5,8 @@ import stories from "./stories.module.css"
 import { Link } from "react-router-dom";
 import StoryCard from "./StoryCard";
 import option1 from '../assets/option1.svg'
+import the_witch from '../assets/the_witch.png'
+
 import BabaYaga from "./babaYaga";
 
 function Stories(){
@@ -20,8 +22,9 @@ function Stories(){
                         </Link>
 
                         <Link to='/BabaYaga' className={stories.options}>
-                            <StoryCard image={option1} title="Baba Yaga: The Witch" paragraph="Can you outsmart the witch?"/>
+                            <StoryCard image={the_witch} title="Baba Yaga: The Witch" paragraph="Can you outsmart the witch?"/>
                         </Link>
+
                         <Link to='/StoryThree' className={stories.options}>                        
     
                         <StoryCard image={option1} title="Story 3" paragraph="Explore the Enchanted Forest and see what you find"/>
