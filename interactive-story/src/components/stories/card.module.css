@@ -1,7 +1,7 @@
 .cardContainer {
     background-color: #ffffff;
-    width: 500px;
-    border-radius: 15px;
+    width: 450px;
+    border-radius: 25px;
     padding: 1rem;
     cursor: pointer;
 }

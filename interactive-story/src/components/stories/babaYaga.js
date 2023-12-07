@@ -4,6 +4,7 @@ import storyStyles from "./storyStyles.module.css"
 import home from "../homepage/home.module.css"
 import NavBar from '../navbar/nav';
 import Background from '../background';
+import { Link } from 'react-router-dom';
 
 
 function BabaYaga({ documentId, onButtonPress }) {
@@ -62,8 +63,8 @@ function BabaYaga({ documentId, onButtonPress }) {
       <div>
         <Background>
           <div className={storyStyles.storyContainer}>
-            <h1>Story 1</h1>
             <div className={storyStyles.storyInnerContainer}>
+            <Link to="/Stories" style={{textAlign:'right'}}>Exit Story</Link>
               <div className={storyStyles.storyData}>
                 <h2 className={storyStyles.title}>{entry.title}</h2>
                 <p>{entry.option1}</p>
