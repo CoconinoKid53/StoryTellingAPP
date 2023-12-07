@@ -29,7 +29,7 @@ function Stories(){
     
                         <StoryCard image={option1} title="Story 3" paragraph="Explore the Enchanted Forest and see what you find"/>
                         </Link>
-                        <StoryCard image={option1} title="Option 1" paragraph="Ready to jump into an adventure with Chloe as she makes her way to school?"/>
+                        <StoryCard image={option1} title="Option 1" paragraph="Help Chloe on her way to school!"/>
                     </div>
                     <div>
                     </div>
