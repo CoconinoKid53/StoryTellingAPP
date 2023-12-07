@@ -32,7 +32,7 @@ function App() {
         <Route path='/Stories' element={<Stories />}/>
         <Route path='/StoryOne' element={<StoryOne documentId={documentId} onButtonPress={handleButtonPress}/>}/>
         <Route path='/BabaYaga' element={<BabaYaga documentId={documentId} onButtonPress={handleButtonPress}/>}/>
-
+        <Route path='/StoryThree' element={<StoryThree documentId={documentId} onButtonPress={handleButtonPress}/>}/>
       </Routes>
     </div>
     
