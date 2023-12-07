@@ -64,7 +64,7 @@ function StoryOne({ documentId, onButtonPress }) {
         <Background>
           <div className={storyStyles.storyContainer}>
           <div className={storyStyles.headingContainer}>
-                <h1>The Enchanted Forest Adventure</h1>
+                <h1>Tim's First Day of School</h1>
                 <Link to="/Stories" style={{textAlign:'right'}}>Exit Story</Link>
             </div>
             <div className={storyStyles.storyInnerContainer}>
