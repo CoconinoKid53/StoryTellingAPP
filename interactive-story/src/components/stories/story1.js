@@ -4,6 +4,7 @@ import storyStyles from "./storyStyles.module.css"
 import home from "../homepage/home.module.css"
 import NavBar from '../navbar/nav';
 import Background from '../background';
+import { Link } from 'react-router-dom';
 
 
 function StoryOne({ documentId, onButtonPress }) {
@@ -62,18 +63,25 @@ function StoryOne({ documentId, onButtonPress }) {
       <div>
         <Background>
           <div className={storyStyles.storyContainer}>
-            <h1>Story 1</h1>
+          <div className={storyStyles.headingContainer}>
+                <h1>The Enchanted Forest Adventure</h1>
+                <Link to="/Stories" style={{textAlign:'right'}}>Exit Story</Link>
+            </div>
             <div className={storyStyles.storyInnerContainer}>
               <div className={storyStyles.storyData}>
                 <h2 className={storyStyles.title}>{entry.title}</h2>
                 <p>{entry.option1}</p>
-                <p className={storyStyles.description}>{entry.desc}</p>
-                <div className={storyStyles.buttonStyle}>
-                  {buttons.map((button) => (
-                    <button className={storyStyles.buttons} key={button.id} onClick={() => handleButtonPress(button.id)}>
-                      {button.id}
-                    </button>
-                  ))}
+                <p className={storyStyles.description}>{entry.desc}</p><div className={storyStyles.content}>
+                    <div className={storyStyles.buttonStyle}>
+                    {buttons.map((button) => (
+                        <button className={storyStyles.buttons} key={button.id} onClick={() => handleButtonPress(button.id)}>
+                        {button.id}
+                        </button>
+                    ))}
+                    </div>
+                    <div className={storyStyles.imageContainer}>
+                        <img className={storyStyles.images} src={entry.image}/>
+                    </div>
                 </div>
               </div>
             </div>
