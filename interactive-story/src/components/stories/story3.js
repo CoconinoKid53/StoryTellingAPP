@@ -51,8 +51,9 @@ function StoryThree({ documentId, onButtonPress }) {
    };
 
    const buttons = Object.keys(entry)
-    .filter((key) => key.startsWith('Option') || key === 'Back' || key.startsWith('Game')) // Filter button fields
-    .map((key) => ({ id: key, label: entry[key] })); // Map to an array of objects
+    .filter((key) => key.startsWith('Option') || key === 'Back' || key.startsWith('Game') || key.startsWith('Start'))// Filter button fields
+    .map((key) => ({ id: key, label: entry[key] }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
 
   return (
